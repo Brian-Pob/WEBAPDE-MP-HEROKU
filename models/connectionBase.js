@@ -1,4 +1,4 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/memedb', {useNewUrlParser: true})
+mongoose.connect('mongodb://brian:abc123@ds235352.mlab.com:35352/memedb', {useNewUrlParser: true})
 
 module.exports.connection = mongoose
