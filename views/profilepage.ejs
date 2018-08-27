@@ -1,0 +1,288 @@
+<html>
+
+<head>
+    <title>MEMESUPREME.COM</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/toggleswitch.min.css">
+    <link rel="stylesheet" href="css/autocomplete.min.css">
+    <link rel="stylesheet" href="framework/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imgs/favicon.png">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap-filestyle.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <link rel="icon" href="imgs/favicon.png">
+</head>
+
+<body>
+    <%- include loggedinnavbar %>   
+    
+    <div class="container profile">
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+                <div class="profile info">
+                    <div class="profile img">
+                        <img class="rounded-circle userpic" src="<%= userData.profilePic %>">
+                    </div>
+                    <div class="profile username">
+                        <h3>
+                            <small style="color: white"><%= userData.user %></small>
+                        </h3>
+                    </div>
+                    <div class="profile desciption">
+                        <p style="color: white"><%= userData.profileDesc %></p>
+                        <p style="color: white"><%= userData.user %> joined <%= userData.datejoined %> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- This is the profile's posts -->
+
+    <div class="container img-post">
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>
+                            <strong>Oh please help me I think Im addicted</strong>
+                        </h3>
+                        <span class="badge badge-primary">Gaming</span>
+                        <p>
+                            <small>45,234 points ° 51 comments</small>
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <div class="pb-2 mt-4 mb-2 border-bottom">
+
+                            <a data-toggle="modal" data-target="#wfModal3">
+                                <img class="rounded" src="../imgs/wf.jpg">
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-success fa-2x fas fa-arrow-up"></button>
+                        <button class="btn btn-outline-danger fa-2x fas fa-arrow-down"></button>
+                        <button class="btn btn-outline-primary  fa-2x fab fa-facebook-f"></button>
+                        <button class="btn btn-outline-info fa-2x fab fa-twitter "></button>
+                        <button class="btn btn-outline-secondary  fa-2x fas fa-comment-alt"></button>
+                        <button class="btn btn-outline-dark btn-lg">Edit Tags</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="wfModal3">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>
+                                    <strong>Oh please help me I think Im addicted</strong>
+                                </h3>
+                                <span class="badge badge-primary">Gaming</span>
+                                <p>
+                                    <small>45,234 points ° 51 comments</small>
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <div class="pb-2 mt-4 mb-2 ">
+                                    <a href="#">
+                                        <img class="rounded picture" src="../imgs/wf.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-outline-success fa-2x fas fa-arrow-up"></button>
+                                <button class="btn btn-outline-danger fa-2x fas fa-arrow-down"></button>
+                                <button class="btn btn-outline-primary  fa-2x fab fa-facebook-f"></button>
+                                <button class="btn btn-outline-info fa-2x fab fa-twitter "></button>
+                                <button class="btn btn-outline-secondary  fa-2x fas fa-comment-alt"></button>
+                                <button class="btn btn-outline-dark btn-lg">Edit Tags</button>
+                                <div>
+                                    <label>
+                                        <b>Anonymous: </b>This game is amazing!</label>
+                                </div>
+                                <div>
+                                    <input type="text" class="commentBox" placeholder="Add a comment...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container img-post">
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>
+                            <strong>I still really love this game!</strong>
+                        </h3>
+                        <span class="badge badge-primary">Gaming</span>
+                        <p>
+                            <small>1,000 points ° 40 comments</small>
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <div class="pb-2 mt-4 mb-2 border-bottom">
+
+                            <a data-target="#wfModal2" data-toggle="modal">
+                                <img class="rounded" src="../imgs/wf.jpg">
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-success fa-2x fas fa-arrow-up"></button>
+                        <button class="btn btn-outline-danger fa-2x fas fa-arrow-down"></button>
+                        <button class="btn btn-outline-primary  fa-2x fab fa-facebook-f"></button>
+                        <button class="btn btn-outline-info fa-2x fab fa-twitter "></button>
+                        <button class="btn btn-outline-secondary  fa-2x fas fa-comment-alt"></button>
+                        <button class="btn btn-outline-dark btn-lg">Edit Tags</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="wfModal2">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>
+                                    <strong>I still really love this game!</strong>
+                                </h3>
+                                <span class="badge badge-primary">Gaming</span>
+                                <p>
+                                    <small>1,000 points ° 40 comments</small>
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <div class="pb-2 mt-4 mb-2 ">
+                                    <a href="#">
+                                        <img class="rounded picture" src="../imgs/wf.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-outline-success fa-2x fas fa-arrow-up"></button>
+                                <button class="btn btn-outline-danger fa-2x fas fa-arrow-down"></button>
+                                <button class="btn btn-outline-primary  fa-2x fab fa-facebook-f"></button>
+                                <button class="btn btn-outline-info fa-2x fab fa-twitter "></button>
+                                <button class="btn btn-outline-secondary  fa-2x fas fa-comment-alt"></button>
+                                <button class="btn btn-outline-dark btn-lg">Edit Tags</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container img-post">
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>
+                            <strong>I love this game!</strong>
+                        </h3>
+                        <span class="badge badge-primary">Gaming</span>
+                        <p>
+                            <small>1,234 points ° 56 comments</small>
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <div class="pb-2 mt-4 mb-2 border-bottom">
+                            <a data-toggle="modal" data-target="#wfModal">
+                                <img class="rounded" src="../imgs/wf.jpg">
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-success fa-2x fas fa-arrow-up"></button>
+                        <button class="btn btn-outline-danger fa-2x fas fa-arrow-down"></button>
+                        <button class="btn btn-outline-primary  fa-2x fab fa-facebook-f"></button>
+                        <button class="btn btn-outline-info fa-2x fab fa-twitter "></button>
+                        <button class="btn btn-outline-secondary  fa-2x fas fa-comment-alt"></button>
+                        <button class="btn btn-outline-dark btn-lg">Edit Tags</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="wfModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>
+                                    <strong>I love this game!</strong>
+                                </h3>
+                                <span class="badge badge-primary">Gaming</span>
+                                <p>
+                                    <small>1,234 points · 56 comments</small>
+
+                                </p>
+                                <span class="badge badge-success badge-default badge-pill">Your Post</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="pb-2 mt-4 mb-2 ">
+                                    <a href="#">
+                                        <img class="rounded picture" src="../imgs/wf.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-outline-success fa-2x fas fa-arrow-up"></button>
+                                <button class="btn btn-outline-danger fa-2x fas fa-arrow-down"></button>
+                                <button class="btn btn-outline-primary  fa-2x fab fa-facebook-f"></button>
+                                <button class="btn btn-outline-info fa-2x fab fa-twitter "></button>
+                                <button class="btn btn-outline-secondary  fa-2x fas fa-comment-alt"></button>
+                                <button class="btn btn-outline-dark btn-lg">Edit Tags</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container showmore">
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="#">Show me more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

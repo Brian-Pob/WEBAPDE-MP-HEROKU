@@ -1,0 +1,36 @@
+{
+  "name": "webapde-mp",
+  "version": "1.0.0",
+  "description": "WEBAPDE MP Phase 1\r Brian Poblete, Ma. Lourdes Fernandez, Kyle Sim",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-mongo": "^2.0.1",
+    "crypto": "^1.0.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-sanitizer": "^1.0.4",
+    "express-session": "^1.15.6",
+    "formidable": "^1.2.1",
+    "mongoose": "^5.2.7",
+    "node-datetime": "^2.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brian-Pob/WEBAPDE-MP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brian-Pob/WEBAPDE-MP/issues"
+  },
+  "homepage": "https://github.com/Brian-Pob/WEBAPDE-MP#readme",
+  "engines": {
+    "node": "8.11.3"
+  },
+  "start": "node index.js"
+}

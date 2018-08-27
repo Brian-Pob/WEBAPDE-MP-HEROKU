@@ -1,0 +1,196 @@
+body{
+    background-color: 1d1d1d;
+    margin-top: 75px;
+}
+
+.img-post {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.img-post img {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#sign-up,
+#log-in,
+#profile-btn,
+#logout {
+    margin-right: 5px;
+}
+
+/*  PROFILE STYLING   */
+
+.container.overview {
+    text-align: center;
+}
+
+.profile.info {
+    padding: inherit;
+    text-align: center;
+    display: inline;
+}
+
+.profile.username {
+    text-align: center;
+    /*  Will add styling later   */
+}
+
+.profile.description {
+    /*  Will add styling later   */
+}
+
+.userpic {
+    width: 140px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/* logged in */
+
+.uploadbtn {
+    text-align: center;
+}
+
+.commentBox {
+    width: 300;
+}
+
+#dropzone {
+    background: white;
+    border-radius: 5px;
+    border: 2px dashed rgb(0, 135, 247);
+    border-image: none;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.uploader {
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    border: 2px dashed rgb(0, 135, 247);
+    width: 500px;
+    height: 300px;
+}
+
+#filePhoto {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    top: -50px;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.uploader img {
+    position: absolute;
+    width: 500px;
+    height: 352px;
+    top: -1px;
+    left: -1px;
+    z-index: 1;
+    border: none;
+}
+
+.uploader p {
+    margin: 0;
+    background: lightblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#inputVisibility {
+    cursor: default
+}
+
+.card-header, .card-footer {
+    background-color: whitesmoke;
+}
+
+.card-header h2 {
+    color: black;
+}
+
+div.card-body {
+    background-color: white;
+}
+
+.bg-dark {
+    background-color: 131212!important;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+.navbar-brand>img {
+    height: 50px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+.modal-backdrop {
+  z-index: -1;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.steadysizecontainer {
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 420px;
+   overflow:hidden;
+   min-height:0px !important;
+}
+
+.steadysizepostcontainer {
+    padding-right: 15px;
+   padding-left: 15px;
+   margin-right: 100px;
+   margin-left: auto;
+    min-height:0px !important;
+}
+
+.hide-prompt {
+    display: none;
+    
+}
+
+.failed-prompt {
+    text-align: center;
+    width: 30%;
+    margin: auto;
+}
+
+.btn-space {
+    margin-right: 5px;
+}
+
+.card.verrynaice {
+    width: 550px;
+    height: auto;
+}
+
+.modal-lg {
+    max-width: 50% !important;
+}
+
+.modal-content {
+    width: 590px! important;
+}

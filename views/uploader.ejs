@@ -1,0 +1,78 @@
+<div class="modal fade mx-auto" id="uploadModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="card verrynaice">
+                    <div class="card-header">
+                        <h2>
+                            <strong>Upload a Meme</strong>
+                        </h2>
+                    </div>
+                <div class="card-body uploadingcontent">
+                    <form id="uploadMemeForm" class="my-0 my-lg-0" autocomplete="off" action="/system-processing/uploadpost-result" method="post" enctype="multipart/form-data" >
+                        <div class="upload content">
+                            <input class="form-control input-lg" type="text" placeholder="Meme Title" name="inputPostTitle" aria-label="Upload">
+                            <br>
+                            <!-- <input type="file" class="form-control-file border input input-lg" name="imgfile"> -->
+
+                            <div class="uploader" onclick="$('#filePhoto').click()">
+                                <p>click here or drag and drop your image!</p>
+                                <img src="" />
+                                <input type="file" id="filePhoto" class="form-control-file input-lg" placeholder="Upload Meme" name="inputPostImage" aria-label="Upload"
+                                />
+                            </div>
+
+                            <script>
+                                var imageLoader = document.getElementById('filePhoto');
+                                imageLoader.addEventListener('change', handleImage, false);
+
+                                function handleImage(e) {
+                                    var reader = new FileReader();
+                                    reader.onload = function (event) {
+
+                                        $('.uploader img').attr('src', event.target.result);
+                                    }
+                                    reader.readAsDataURL(e.target.files[0]);
+                                }
+                            </script>
+                           
+                            <br>
+                            <input class="form-control input-lg" type="text" placeholder="Meme Tags, Separated by, Comma" name="inputTags" aria-label="Upload">
+                            <br>
+                           
+                            <div class="btn-group">
+                                <input class="form-control input-lg" type="text" id="inputVisibility" name="inputVisibility" readonly="true" placeholder="Public">
+                                
+                                <button id="btnPrivate" type="button" class="btn btn-secondary" onclick="return changeVisibilityPrivate()">Private</button>
+                                <button id="btnPublic" type="button" class="btn btn-primary" onclick="return changeVisibilityPublic()">Public</button>
+                            </div>
+                            <br>
+                            <br>
+                            
+                            <!-- AUTOCOMPLETE GOES HERE -->
+                            <div id="sharedUserDiv" style="display: none;" class="autocomplete">
+                                <input class="form-control input-lg" id="inputSharedUser" type="text"  placeholder="Shared User" name="inputSharedUser" aria-label="Upload" >
+                            </div>
+
+                            <div class="uploadbtn">
+                                <button class="btn btn-dark btn-lg my-2 my-sm-1" type="submit">Upload Meme</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <script>
+        $( function() {
+            var unames = '<%= data.usernameList %>'
+            var unameList = unames.split(',')
+            console.log(unameList)
+            $( "#inputSharedUser" ).autocomplete({
+                source: unameList
+            });
+            } );
+    </script>

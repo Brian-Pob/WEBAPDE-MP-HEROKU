@@ -1,0 +1,104 @@
+<% 
+    var loginFailedClass
+    if(data.loginfailed){
+        loginFailedClass = 'alert alert-danger failed-prompt'
+    }else{
+        loginFailedClass = 'hide-prompt alert alert-danger failed-prompt'
+    }
+
+    var signupFailedClass
+    if(data.signupfailed){
+        signupFailedClass = 'alert alert-danger failed-prompt'
+    }else{
+        signupFailedClass = 'hide-prompt alert alert-danger failed-prompt'
+    }
+%>
+<html>
+
+<head>
+    <title>MEMESUPREME.COM</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/toggleswitch.min.css">
+    <link rel="stylesheet" href="css/autocomplete.min.css">
+    <link rel="stylesheet" href="framework/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imgs/favicon.png">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap-filestyle.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+</head>
+
+<body>
+    
+    <%  if(typeof data.user === 'undefined'){%>
+    <%- include navbar %>
+    <%} else {%>
+    <%- include loggedinnavbar %>
+    <%} %>
+
+    <!-- PROMPT IF LOGIN FAILED -->
+    <div class='<%= loginFailedClass %>'>Login Failed. Check username or password.</div>
+    <!-- PROMPT IF SIGNUP FAILED -->
+    <div class='<%= signupFailedClass %>'>SignUp failed. User already exists.</div>
+
+    <div class= "allposts">
+        <div class="container img-post">
+        <div class="row">
+            <!-- DENISE, THIS IS THE THING THAT YOU MADE FOR SEARCHING TAGS -->
+            <%- include tagsearch.ejs %>
+            <div class="col-lg-6 steadysizepostcontainer">
+                <%  if(typeof data.user === 'undefined'){%>
+                <%} else {%>
+                <%- include uploader %>
+                <%} %>
+                <br>
+                
+                <% for(var i = 0; i < data.list.length; i++) { %>
+                <!-- START OF MEME -->
+                <%- include meme.ejs %>
+                <!-- END OF MEME -->
+                <% } %>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <a href="#">See more...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <script>
+        $('[data-toggle="collapse"]').on('click', function() {
+            var $this = $(this),
+            $parent = typeof $this.data('parent')!== 'undefined' ? $($this.data('parent')) : undefined;
+            if($parent === undefined) { /* Just toggle my  */
+                $this.find('.glyphicon').toggleClass('glyphicon-plus glyphicon-minus');
+                return true;
+            }
+
+            /* Open element will be close if parent !== undefined */
+            var currentIcon = $this.find('.glyphicon');
+            currentIcon.toggleClass('glyphicon-plus glyphicon-minus');
+            $parent.find('.glyphicon').not(currentIcon).removeClass('glyphicon-minus').addClass('glyphicon-plus');
+
+        });
+    </script>
+    
+    
+    <%- include footer %>
+
+</body>
+
+</html>

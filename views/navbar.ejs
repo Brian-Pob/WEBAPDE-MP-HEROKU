@@ -1,0 +1,130 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img style="margin-right: 10px; padding: 0;" src = "http://www.stickpng.com/assets/thumbs/580b585b2edbce24c47b2a2c.png"> <strong>MemeSupreme</strong>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Sort By Tag
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Funny</a>
+                        <a class="dropdown-item" href="#">Gaming</a>
+                        <a class="dropdown-item" href="#">Technology</a>
+                        <a class="dropdown-item" href="#">Ded</a>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hot</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Fresh</a>
+                </li>
+            </ul>
+
+            <!-- LOGIN -->
+            <button class="btn btn-secondary" id="log-in" data-toggle="modal" data-target="#loginModal">Login</button>
+            <!-- The Modal -->
+            <div class="modal fade" id="loginModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Log In</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form class="form-signin" action="/login" method="POST">
+
+                                <h1 class="h3 mb-3 font-weight-normal">Log In to your &copy;MemeSupreme experience maximum
+                                    <i>dankness</i>
+                                </h1>
+                                <label for="inputUsernameLogin" class="sr-only">Username</label>
+                                <input type="text" id="inputUsernameLogin" name="inputUsernameLogin"class="form-control" placeholder="Username" required autofocus>
+                                <br>
+                                <label for="inputPasswordLogin" class="sr-only">Password</label>
+                                <input type="password" id="inputPasswordLogin" name="inputPasswordLogin" class="form-control" placeholder="Password" required>
+                                <div class="checkbox mb-3">
+                                    <label>
+                                        <input type="checkbox" value="remember-me"> Remember me
+                                    </label>
+                                </div>
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+                                <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF LOGIN -->
+            <!-- SIGNUP -->
+            <button class="btn btn-primary" id="sign-up" data-toggle="modal" data-target="#signupModal">Sign Up</button>
+
+            <!-- The Modal -->
+            <div class="modal fade" id="signupModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Sign Up</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form class="form-signin" action="/signup" method="POST" enctype="multipart/form-data">
+
+                                <h1 class="h3 mb-3 font-weight-normal">Sign Up for a &copy;MemeSupreme account and experience a new dimension of
+                                    <i>litness</i>
+                                </h1>
+                                <label for="inputUsernameSignup" class="sr-only">Username</label>
+                                <input type="username" id="inputUsernameSignup" name="inputUsernameSignup" class="form-control" placeholder="Username" required>
+                                <br>
+
+                                <label for="inputPasswordSignup" class="sr-only">Password</label>
+                                <input type="password" id="inputPasswordSignup" name="inputPasswordSignup" class="form-control" placeholder="Password" required>
+                                <br>
+
+                                <label for="inputDescSignup" class="sr-only">Description</label>
+                                <input type="description" id="inputDescriptionSignup" name="inputDescriptionSignup" class="form-control" placeholder="Profile Description" required>
+                                <br>
+
+                                <label>Profile Picture</label>
+                                <input class="form-control-file input-lg" type="file" placeholder="Upload Profile Picture" id="inputProfileImage" name="inputProfileImage" aria-label="Upload">
+                        
+                                <div class="checkbox mb-3">
+                                    <label>
+                                        <input type="checkbox" value="remember-me"> Remember me </input>
+                                    </label>
+                                </div>
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+                                <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Modal -->
+        </div>
+        <!-- END OF SIGNUP -->
+    </div>
+</nav>
